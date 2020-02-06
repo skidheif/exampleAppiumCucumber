@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite" thread-count="4" parallel="tests">
+
+    <listeners>
+        <listener class-name="com.test.Utils.Listener"/>
+        <listener class-name="com.test.Utils.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="nexus10">
+        <parameter name="platform" value="Android"></parameter>
+        <parameter name="platformVersion" value="10.0"></parameter>
+        <parameter name="deviceName" value="nexus10"></parameter>
+        <parameter name="port" value="2315"></parameter>
+        <parameter name="udid" value="emulator-5554"></parameter>
+        <classes>
+            <class name="com.test.Runner.RunCukesTest"/>
+        </classes>
+    </test>
+
+    <test name="nexus9">
+        <parameter name="platform" value="Android"></parameter>
+        <parameter name="platformVersion" value="9.0"></parameter>
+        <parameter name="deviceName" value="nexus9"></parameter>
+        <parameter name="port" value="2316"></parameter>
+        <parameter name="udid" value="emulator-5556"></parameter>
+        <classes>
+            <class name="com.test.Runner.RunCukesTest"/>
+        </classes>
+    </test>
+
+    <!-- CucumberAppiumTest -->
+    <!--<test name="CucumberAppiumTest-IOS">-->
+        <!--<parameter name="platform" value="iOS"></parameter>-->
+        <!--<parameter name="platformVersion" value="11.4"></parameter>-->
+        <!--<parameter name="deviceName" value="iPhone 7"></parameter>-->
+        <!--<parameter name="port" value="2317"></parameter>-->
+        <!--<parameter name="udid" value="14D1F964-F72F-4AF3-84BD-08CD706D348B"></parameter>-->
+        <!--<classes>-->
+            <!--<class name="com.test.Runner.RunCukesTest"/>-->
+        <!--</classes>-->
+    <!--</test> &lt;!&ndash; CucumberAppiumTest &ndash;&gt;-->
+</suite> <!-- Default Suite -->
